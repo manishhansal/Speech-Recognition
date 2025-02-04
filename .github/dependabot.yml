@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "automation"
+    assignees:
+      - "manishhansal"
+    reviewers:
+      - "manishhansal"
+    commit-message:
+      prefix: "chore"
+      prefix-development: "dev-deps"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
